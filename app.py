@@ -14,7 +14,7 @@ Original file is located at
 
 
 # Commented out IPython magic to ensure Python compatibility.
- %%writefile app.py
+ #%%writefile app.py
  import streamlit as st
  import tensorflow as tf
  import pandas as pd
