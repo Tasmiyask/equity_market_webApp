@@ -86,7 +86,7 @@ elif select_type=='Product Company':
  training_size=int(len(df1)*0.65)
  test_size=len(df1)-training_size
  train_data,test_data=df1[0:training_size,:],df1[training_size:len(df1),:1]
- 
+
  import numpy
  # convert an array of values into a dataset matrix
  def create_dataset(dataset, time_step=1):
