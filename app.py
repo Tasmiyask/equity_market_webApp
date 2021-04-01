@@ -7,6 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1D5lpjRGRdPGNMc5WGnRyNBst1zrA99iW
 """
 
+
+
 #!pip install streamlit --quiet
 #!pip install pyngrok==4.1.1 --quiet
 #from pyngrok import ngrok
@@ -15,62 +17,62 @@ Original file is located at
 
 # Commented out IPython magic to ensure Python compatibility.
  #%%writefile app.py
- import streamlit as st
- import tensorflow as tf
- import pandas as pd
- from PIL import Image
- from tensorflow.keras.models import load_model
- st.set_option('deprecation.showPyplotGlobalUse', False)
- st.header('EQUITY MARKET PREDICTION AND ANALYSIS')
- import pandas_datareader as pdr
- import numpy as np
+import streamlit as st
+import tensorflow as tf
+import pandas as pd
+from PIL import Image
+from tensorflow.keras.models import load_model
+st.set_option('deprecation.showPyplotGlobalUse', False)
+st.header('EQUITY MARKET PREDICTION AND ANALYSIS')
+import pandas_datareader as pdr
+import numpy as np
  #image = Image.open('image.png')
  #st.image(image,use_column_width=True)
  
- radio_list=['Service Company','Product Company']
- select_type=st.sidebar.radio('Select Company Type',radio_list)
+radio_list=['Service Company','Product Company']
+select_type=st.sidebar.radio('Select Company Type',radio_list)
  
- if select_type=='Service Company':
-   stock_list = [ 'INFY','WIT','TCS','CTSH','ORCL','GS','TDC','CAP.PA','LTI.NS']
-   select = st.sidebar.selectbox('Select Company',stock_list)
-   st.write(select)
-   if select == 'INFY':
-         model = load_model('infosys.hdf5')
-   elif select =='WIT':
+if select_type=='Service Company':
+  stock_list = [ 'INFY','WIT','TCS','CTSH','ORCL','GS','TDC','CAP.PA','LTI.NS']
+  select = st.sidebar.selectbox('Select Company',stock_list)
+  st.write(select)
+  if select == 'INFY':
+       model = load_model('infosys.hdf5')
+  elif select =='WIT':
        model = load_model('wipro.hdf5')
-   elif select =='TCS':
+  elif select =='TCS':
        model = load_model('tcs.hdf5')
-   elif select =='CTSH':
+  elif select =='CTSH':
        model = load_model('cognizant.hdf5')
-   elif select =='ORCL':
+  elif select =='ORCL':
        model = load_model('oracle.hdf5')
-   elif select =='GS':
+  elif select =='GS':
        model = load_model('goldmansachs.hdf5')
-   elif select =='TDC':
+  elif select =='TDC':
        model = load_model('teradata.hdf5')
-   elif select =='CAP.PA':
+  elif select =='CAP.PA':
        model = load_model('capgemini.hdf5')
-   elif select =='LTI.NS':
+  elif select =='LTI.NS':
        model = load_model('lti.hdf5')
- elif select_type=='Product Company':
-   stock_list = ['AAPL','BABA','GOOGL','MSFT','AMZN', 'ADBE','DELL','HP','SNE']
-   select = st.sidebar.selectbox('Select IT Product Company',stock_list)
-   st.write(select)
-   if select == 'AAPL':
-         model = load_model('apple.hdf5')
-   elif select =='BABA':
+elif select_type=='Product Company':
+  stock_list = ['AAPL','BABA','GOOGL','MSFT','AMZN', 'ADBE','DELL','HP','SNE']
+  select = st.sidebar.selectbox('Select IT Product Company',stock_list)
+  st.write(select)
+  if select == 'AAPL':
+       model = load_model('apple.hdf5')
+  elif select =='BABA':
        model = load_model('baba.hdf5')
-   elif select =='GOOGL':
+  elif select =='GOOGL':
        model = load_model('Google.hdf5')
-   elif select =='MSFT':
+  elif select =='MSFT':
        model = load_model('microsoft.hdf5')
-   elif select =='AMZN':
+  elif select =='AMZN':
        model = load_model('amazon.hdf5')
-   elif select =='ADBE':
+  elif select =='ADBE':
        model = load_model('adobe.hdf5')
-   elif select =='DELL':
+  elif select =='DELL':
        model = load_model('dell.hdf5')
-   elif select =='HP':
+  elif select =='HP':
        model = load_model('hp.hdf5')
    elif select =='SNE':
        model = load_model('sony.hdf5')
@@ -181,9 +183,7 @@ Original file is located at
  st.write(valid)
 
 
-#from google.colab import drive
-#drive.mount('/content/drive')
 
-#!nohup streamlit run app.py &
-#url = ngrok.connect(port = '8501')
-#print(url)
+
+
+
