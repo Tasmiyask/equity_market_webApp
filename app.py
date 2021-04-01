@@ -74,7 +74,7 @@ elif select_type=='Product Company':
        model = load_model('dell.hdf5')
   elif select =='HP':
        model = load_model('hp.hdf5')
-   elif select =='SNE':
+  elif select =='SNE':
        model = load_model('sony.hdf5')
  
  
