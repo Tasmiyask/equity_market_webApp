@@ -72,6 +72,7 @@ model = load_my_model(model_file)
 if model is None: st.stop()
 
 # --- STEP 3: DATA FETCHING ---
+
 @st.cache_data
 def load_data(symbol):
     # Historical data range from your original project
